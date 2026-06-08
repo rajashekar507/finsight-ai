@@ -216,3 +216,42 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ============================================================
+# FinSight AI — Project Specific
+# ============================================================
+
+# Data directories — financial documents never go to GitHub
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# MLflow experiment tracking — large artifacts
+mlruns/
+mlflow_runs/
+mlartifacts/
+
+# LangSmith local cache
+.langsmith/
+
+# Any additional env file variations
+*.env
+!.env.example
+
+# Model weights and checkpoints — too large for GitHub
+*.bin
+*.safetensors
+*.pt
+*.pth
+checkpoints/
+
+# Pinecone local cache
+pinecone_cache/
+
+# VS Code workspace settings — personal preference, not project config
+.vscode/settings.json
+
+# macOS system files
+.DS_Store
+**/.DS_Store

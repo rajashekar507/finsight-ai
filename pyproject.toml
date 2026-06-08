@@ -1,0 +1,78 @@
+# ============================================================
+# FinSight AI — Project Configuration
+# Python 3.11.9
+# Verified: June 2026
+# ============================================================
+
+[project]
+name = "finsight-ai"
+version = "0.1.0"
+description = "Production-grade RAG and multi-agent platform for financial document intelligence"
+requires-python = ">=3.11"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/rajashekar507/finsight-ai"
+Repository = "https://github.com/rajashekar507/finsight-ai"
+
+# ============================================================
+# Black — Code Formatter Configuration
+# Version: 26.5.1
+# Verified from: https://black.readthedocs.io/en/stable/
+# ============================================================
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+required-version = "26"
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | __pycache__
+  | build
+  | dist
+)/
+'''
+
+# ============================================================
+# Ruff — Linter Configuration
+# Version: 0.15.16
+# Verified from: https://docs.astral.sh/ruff/settings/
+# ============================================================
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes - unused imports, undefined names
+    "I",   # isort - import ordering
+    "B",   # bugbear - likely bugs and design problems
+    "UP",  # pyupgrade - outdated Python syntax
+]
+ignore = [
+    "E501",  # line too long - Black handles this
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["F401"]  # allow unused imports in test files
+
+# ============================================================
+# Pytest — Testing Configuration
+# Version: 9.0.3
+# Verified from: https://docs.pytest.org/
+# ============================================================
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+verbose = true

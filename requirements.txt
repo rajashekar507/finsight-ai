@@ -1,0 +1,51 @@
+# ============================================================
+# FinSight AI — Requirements
+# Python 3.11.9
+# Versions verified from PyPI: June 2026
+# ============================================================
+
+# --- Core LLM & Orchestration ---
+langchain==1.3.4
+langchain-community==0.4.2
+langchain-openai==1.2.2
+langgraph==1.2.4
+langsmith==0.8.11
+
+# --- Vector Database ---
+pinecone==9.1.0
+
+# --- Embeddings & Models ---
+openai==2.41.0
+tiktoken==0.13.0
+sentence-transformers==5.5.1
+transformers==5.10.2
+peft==0.19.1
+
+# --- API Framework ---
+fastapi==0.136.3
+uvicorn==0.49.0
+pydantic==2.13.4
+
+# --- Data Processing ---
+pypdf==6.13.1
+python-docx==1.2.0
+pandas==2.2.3
+numpy==2.2.5
+
+# --- Evaluation & Safety ---
+ragas==0.4.3
+
+# --- MLOps & Experiment Tracking ---
+mlflow==3.13.0
+
+# --- Environment & Configuration ---
+python-dotenv==1.2.2
+
+# --- Testing ---
+pytest==9.0.3
+pytest-asyncio==1.4.0
+httpx==0.28.1
+
+# --- Code Quality ---
+black==26.5.1
+ruff==0.15.16
